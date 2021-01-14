@@ -47,3 +47,31 @@ ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 let midImage = document.getElementById("middle-img");
 midImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+
+//Navigation
+let naviOne = document.querySelectorAll('a');
+naviOne[0].textContent = siteContent["nav"]['nav-item-1'];
+naviOne[1].textContent = siteContent["nav"]['nav-item-2'];
+naviOne[2].textContent = siteContent["nav"]['nav-item-3'];
+naviOne[3].textContent = siteContent["nav"]['nav-item-4'];
+naviOne[4].textContent = siteContent["nav"]['nav-item-5'];
+naviOne[5].textContent = siteContent["nav"]['nav-item-6'];
+
+
+//Task 3 Append and Prepend in Nav Menu
+let parentNav = document.querySelector("nav");
+let newLink = document.createElement("a");
+newLink.textContent = "Home";
+let secondLink = document.createElement("a");
+secondLink.textContent = "Store";
+parentNav.appendChild(secondLink);
+parentNav.prepend(newLink);
+
+//Task 3 Navigation Color Adjustment to Black
+const navColor = document.querySelectorAll("a");
+navColor.forEach(element => {
+    element.style.color = "green";
+});
+
+
+
